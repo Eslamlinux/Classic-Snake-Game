@@ -51,6 +51,20 @@ int inTail = 0;
 
 int speedcount = 0;
 
+struct Colors{
+   string Red = "\e[31m";
+   string Green = "\e[32m";
+   string Yellow = "\e[33m";
+   string Blue = "\e[34m";
+   string Purple = "\e[35m";
+   string Cyan = "\e[36m";
+   string White = "\e[37m";
+   string Reset = "\e[0m";
+   };
+
+    Colors gamecolor;
+
+
 void setup(){
     gameOver = false;
     dir = STOP;
@@ -65,28 +79,29 @@ void setup(){
 void graf(){
     system("clear"); // for linux
     // system("cls"); for windows
-
     // اعلي الشاشة
     for(int i = 0 ; i < width + 2 ;i++){
-        cout << '-' ;
+
+
+        cout << gamecolor.Green << "-" << gamecolor.Reset;
     }
         cout << endl;
 
     // جانبي الشاشة
     for(int i = 0 ; i < height ; i++){
-        cout << '|';
+        cout << gamecolor.Green << '|' << gamecolor.Reset;
         for(int j = 0 ; j < width ; j++){
             if(i == y && j == x){
-                cout << '@';
+                cout << gamecolor.Red << '@' << gamecolor.Reset;
             }
             else if(i == fruitB && j == fruitA){
-                cout << 'O';
+                cout << gamecolor.Yellow << 'O' << gamecolor.Reset;
             }
             else{
                 bool print = false;
                 for(int k = 0 ; k < inTail ; k++){
                     if(tailX[k] == j && taily[k] == i){
-                        cout << 'o';
+                        cout << gamecolor.Yellow << 'o' << gamecolor.Reset;
                         print = true;
                         break;
                     }
@@ -96,17 +111,17 @@ void graf(){
                 }
             }
         }
-        cout << '|';
+        cout << gamecolor.Green << '|' << gamecolor.Reset;
         cout << endl;
     }
     // اسفل الشاشة
      for(int i = 0 ; i < width +2 ;i++){
-        cout << '-' ;
+        cout << gamecolor.Green << '-' << gamecolor.Reset ;
     }
     cout << endl;
-    cout << "your score is: " << score << endl;
-    cout << "Snake Game Made By Eslam Linux " << endl;
-    cout << "Speed Level: " << speedcount << endl;
+    cout << gamecolor.Purple << "your score is: " << gamecolor.Cyan << score << gamecolor.Reset << endl;
+    cout << gamecolor.Purple << "Snake Game Made By:" << gamecolor.Cyan << " Eslam Linux " << endl;
+    cout << gamecolor.Purple << "Speed Level: " << gamecolor.Cyan << speedcount << endl;
 
 
 
@@ -238,7 +253,7 @@ int main (){
     }
 
     if(gameOver){
-    cout << "\n GAME OVER \n";
+    cout << gamecolor.Red << "\n GAME OVER \n" << gamecolor.Reset;
 
 }
 
