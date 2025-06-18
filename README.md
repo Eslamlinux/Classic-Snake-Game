@@ -18,7 +18,7 @@ This is a classic Snake game implemented in CPP. Control the snake to eat food, 
 1. Clone the repository:
     ```bash
     git clone https://github.com/Eslamlinux/Classic-Snake-Game.git
-    cd snake-game
+    cd Classic-Snake-Game
     ```
 
 
