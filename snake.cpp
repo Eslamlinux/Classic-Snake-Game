@@ -30,7 +30,7 @@ int _kbhit() {
     return select(STDIN_FILENO + 1, &fds, NULL, NULL, &tv);
 }
 
-// دالة شبيهة بـ _getche()
+// دالة بديلة بـ _getche()
 char _getch_linux() {
     char ch;
     read(STDIN_FILENO, &ch, 1);
@@ -231,9 +231,27 @@ void speed(){
             speedcount = 6;
             }
         }
-          if(score >= 20){
+          if(score >= 20 && score < 23){
             usleep(160000);
-             if(score == 20){
+             if(score == 22){
+            speedcount = 7;
+            }
+        }
+              if(score >= 23 && score < 25){
+            usleep(150000);
+             if(score == 24){
+            speedcount = 7;
+            }
+        }
+              if(score >= 25 && score < 28){
+            usleep(140000);
+             if(score == 27){
+            speedcount = 7;
+            }
+        }
+              if(score >= 28){
+            usleep(130000);
+             if(score == 27){
             speedcount = 7;
             }
         }
