@@ -1,6 +1,6 @@
 # Classic Snake Game
 
-![Snake Game Screenshot](https://github.com/Eslamlinux/Classic-Snake-Game/My\ classic\ snake\ game.png?raw=true)
+![Snake Game Screenshot](https://github.com/Eslamlinux/Classic-Snake-Game/My\ /classic\ snake\ game.png?raw=true)
 
 ## Overview
 
