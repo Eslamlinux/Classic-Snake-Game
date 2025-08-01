@@ -80,28 +80,28 @@ void graf(){
     system("clear"); // for linux
     // system("cls"); for windows
     // اعلي الشاشة
-    for(int i = 0 ; i < width + 2 ;i++){
+    for(int i = 0 ; i < width -10 ;i++){
 
 
-        cout << gamecolor.Green << "-" << gamecolor.Reset;
+        cout << gamecolor.Green << "🔲" << gamecolor.Reset;
     }
         cout << endl;
 
     // جانبي الشاشة
     for(int i = 0 ; i < height ; i++){
-        cout << gamecolor.Green << '|' << gamecolor.Reset;
+        cout << gamecolor.Green << "🔲" << gamecolor.Reset;
         for(int j = 0 ; j < width ; j++){
             if(i == y && j == x){
-                cout << gamecolor.Red << '@' << gamecolor.Reset;
+                cout << gamecolor.Red << "☣" << gamecolor.Reset;
             }
             else if(i == fruitB && j == fruitA){
-                cout << gamecolor.Yellow << 'O' << gamecolor.Reset;
+                cout << gamecolor.Yellow << "⚰" << gamecolor.Reset;
             }
             else{
                 bool print = false;
                 for(int k = 0 ; k < inTail ; k++){
                     if(tailX[k] == j && taily[k] == i){
-                        cout << gamecolor.Yellow << 'o' << gamecolor.Reset;
+                        cout << gamecolor.Yellow << "𝓸" << gamecolor.Reset;
                         print = true;
                         break;
                     }
@@ -111,12 +111,12 @@ void graf(){
                 }
             }
         }
-        cout << gamecolor.Green << '|' << gamecolor.Reset;
+        cout << gamecolor.Green << "🔲" << gamecolor.Reset;
         cout << endl;
     }
     // اسفل الشاشة
-     for(int i = 0 ; i < width +2 ;i++){
-        cout << gamecolor.Green << '-' << gamecolor.Reset ;
+     for(int i = 0 ; i < width -10 ;i++){
+        cout << gamecolor.Green << "🔲" << gamecolor.Reset ;
     }
     cout << endl;
     cout << gamecolor.Purple << "your score is: " << gamecolor.Cyan << score << gamecolor.Reset << endl;
