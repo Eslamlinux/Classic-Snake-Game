@@ -1,6 +1,6 @@
 #include <iostream>
 // #include <conio.h>
-// #include <stdio.h>
+// #include <stdio.h> c lib
 #include <termios.h> // لمكتبة termios
 #include <unistd.h>  // لـ read و STDIN_FILENO
 #include <fcntl.h>   // لـ fcntl
